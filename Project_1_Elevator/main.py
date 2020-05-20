@@ -412,7 +412,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                             self.elevator_list[i].myList.remove(self.elevator_list[0].level)
             for l in self.elevator_list[0].myList:
                 if l > self.elevator_list[0].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[0].level != 1:
                     for i in range(5):
@@ -421,7 +421,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                                 self.elevator_list[i].myList.remove(self.elevator_list[0].level)
             for l in self.elevator_list[0].myList:
                 if l < self.elevator_list[0].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[0].level != 20:
                     for i in range(5):
@@ -441,7 +441,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                             self.elevator_list[i].myList.remove(self.elevator_list[1].level)
             for l in self.elevator_list[1].myList:
                 if l > self.elevator_list[1].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[1].level != 1:
                     for i in range(5):
@@ -450,7 +450,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                                 self.elevator_list[i].myList.remove(self.elevator_list[1].level)
             for l in self.elevator_list[1].myList:
                 if l < self.elevator_list[1].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[1].level != 20:
                     for i in range(5):
@@ -470,7 +470,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                             self.elevator_list[i].myList.remove(self.elevator_list[2].level)
             for l in self.elevator_list[2].myList:
                 if l > self.elevator_list[2].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[2].level != 1:
                     for i in range(5):
@@ -479,7 +479,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                                 self.elevator_list[i].myList.remove(self.elevator_list[2].level)
             for l in self.elevator_list[2].myList:
                 if l < self.elevator_list[2].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[2].level != 20:
                     for i in range(5):
@@ -499,7 +499,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                             self.elevator_list[i].myList.remove(self.elevator_list[3].level)
             for l in self.elevator_list[3].myList:
                 if l > self.elevator_list[3].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[3].level != 1:
                     for i in range(5):
@@ -508,7 +508,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                                 self.elevator_list[i].myList.remove(self.elevator_list[3].level)
             for l in self.elevator_list[3].myList:
                 if l < self.elevator_list[3].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[3].level != 20:
                     for i in range(5):
@@ -528,7 +528,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                             self.elevator_list[i].myList.remove(self.elevator_list[4].level)
             for l in self.elevator_list[4].myList:
                 if l > self.elevator_list[4].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[4].level != 1:
                     for i in range(5):
@@ -537,7 +537,7 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                                 self.elevator_list[i].myList.remove(self.elevator_list[4].level)
             for l in self.elevator_list[4].myList:
                 if l < self.elevator_list[4].level:
-                    pass
+                    break
             else:
                 if self.elevator_list[4].level != 20:
                     for i in range(5):
@@ -794,13 +794,13 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                     eval("self.pushButton_"+ str(self.elevator_list[0].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[0].myList:
                     if l > self.elevator_list[0].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[0].level != 1:
                         eval("self.pushButton_"+ str(self.elevator_list[0].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[0].myList:
                     if l < self.elevator_list[0].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[0].level != 20:
                         eval("self.pushButton_"+ str(self.elevator_list[0].level) + "_up.setChecked(False)")
@@ -841,13 +841,13 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                     eval("self.pushButton_"+ str(self.elevator_list[1].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[1].myList:
                     if l > self.elevator_list[1].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[1].level != 1:
                         eval("self.pushButton_"+ str(self.elevator_list[1].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[1].myList:
                     if l < self.elevator_list[1].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[1].level != 20:
                         eval("self.pushButton_"+ str(self.elevator_list[1].level) + "_up.setChecked(False)")                
@@ -888,13 +888,13 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                     eval("self.pushButton_"+ str(self.elevator_list[2].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[2].myList:
                     if l > self.elevator_list[2].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[2].level != 1:
                         eval("self.pushButton_"+ str(self.elevator_list[2].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[2].myList:
                     if l < self.elevator_list[2].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[2].level != 20:
                         eval("self.pushButton_"+ str(self.elevator_list[2].level) + "_up.setChecked(False)")                
@@ -935,13 +935,13 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                     eval("self.pushButton_"+ str(self.elevator_list[3].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[3].myList:
                     if l > self.elevator_list[3].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[3].level != 1:
                         eval("self.pushButton_"+ str(self.elevator_list[3].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[3].myList:
                     if l < self.elevator_list[3].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[3].level != 20:
                         eval("self.pushButton_"+ str(self.elevator_list[3].level) + "_up.setChecked(False)")                
@@ -982,13 +982,13 @@ class MyWindow(QMainWindow, Elevator.Ui_MainWindow):
                     eval("self.pushButton_"+ str(self.elevator_list[4].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[4].myList:
                     if l > self.elevator_list[4].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[4].level != 1:
                         eval("self.pushButton_"+ str(self.elevator_list[4].level) + "_down.setChecked(False)")
                 for l in self.elevator_list[4].myList:
                     if l < self.elevator_list[4].level:
-                        pass
+                        break
                 else:
                     if self.elevator_list[4].level != 20:
                         eval("self.pushButton_"+ str(self.elevator_list[4].level) + "_up.setChecked(False)")                
