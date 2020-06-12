@@ -13,3 +13,9 @@ You may enter "pyinstaller -F -w -i favicon.ico main.spec" to generate the .exe 
 And the .exe should look like this:
 
 ![Elevator](Project_1_Elevator/Elevator.png)
+
+## Project 2 Memory Management
+
+The same as Project 1. And the .exe should look like this:
+
+![Memory](Project_2_Memory_Management/ui.png)
