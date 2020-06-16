@@ -34,6 +34,7 @@ class MyWindow(QMainWindow, memory_management.Ui_MainWindow):
         self.TotalCommandValue = 0
         self.ScheduleMethod = ""
         self.MemoryAllocation = []
+        self.TrueMemory = []
         self.CurrentPointer = 0
         self.FailureTimes = 0
         self.PageLackCounter.setStyleSheet("QLabel{color: green;}")
@@ -86,6 +87,7 @@ class MyWindow(QMainWindow, memory_management.Ui_MainWindow):
         "，所在页面为第" + str(page) + "页。"
         if page in self.MemoryAllocation:
             item += "在内存中找到该页面。"
+            item += "指令的物理地址为" + str(self.TrueMemory.index(page) * self.PageCommandValue + self.MyCommandList[self.CurrentPointer] % self.PageCommandValue) + "。"
             # 通过列表中页面排序来实现LRU，FIFO是自动的，无需额外代码
             if self.ScheduleMethod == "LRU":
                 self.MemoryAllocation.remove(page)
@@ -95,11 +97,14 @@ class MyWindow(QMainWindow, memory_management.Ui_MainWindow):
             item += "将第" + str(page) + "页调入内存"
             if len(self.MemoryAllocation) < self.TotalPageValue:
                 self.MemoryAllocation.append(page)
+                self.TrueMemory.append(page)
                 item += "。"
             else:
                 item += "，并将第" + str(self.MemoryAllocation[0]) + "页置换出内存。"
+                self.TrueMemory.remove(self.MemoryAllocation[0])
                 del(self.MemoryAllocation[0])
                 self.MemoryAllocation.append(page)
+                self.TrueMemory.append(page)
         self.PageLackCounter.setText(str(self.FailureTimes))
         self.PageLackRadio.setText(str(round(self.FailureTimes / (self.CurrentPointer + 1), 3)))
         if self.FailureTimes > 0:
@@ -138,6 +143,7 @@ class MyWindow(QMainWindow, memory_management.Ui_MainWindow):
         self.CommandLog.clear()
         self.MyCommandList = []
         self.MemoryAllocation = []
+        self.TrueMemory = []
         self.CurrentPointer = 0
         self.FailureTimes = 0
         if self.FIFOButton.isChecked():
