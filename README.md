@@ -20,7 +20,7 @@ The same as Project 1. And the .exe should look like this:
 
 ![Memory](Project_2_Memory_Management/ui.png)
 
-## Project 2 Memory Management
+## Project 3 File System Management
 
 The same as Project 1. And the .exe should look like this:
 
